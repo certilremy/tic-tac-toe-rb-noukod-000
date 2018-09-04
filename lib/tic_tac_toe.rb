@@ -22,6 +22,16 @@ def position_taken?(board, index)
     end
 end
 
+def valid_move?(board,index)
+  if !index.between?(0,8)
+    return false
+  end
+  if position_taken?(board,index)
+    false
+  else
+    true
+  end
+end
 
 WIN_COMBINATIONS = [
   [0,1,2],
