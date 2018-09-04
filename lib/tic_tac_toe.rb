@@ -14,7 +14,13 @@ def move(array,index,value)
 array[index] = value
 end
 
-
+def position_taken?(board, index)
+    if board[index] == " " || board[index] == "" || (board[index] == "X" && board[index]=="O")
+      false
+    elsif board[index] == "X" || board[index] == "O"
+      true
+    end
+end
 
 
 WIN_COMBINATIONS = [
